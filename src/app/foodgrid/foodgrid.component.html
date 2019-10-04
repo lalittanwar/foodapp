@@ -1,0 +1,65 @@
+
+<div class="container-fluid">
+  <button class="btn btn-success"  routerLink="/food" @fade1>List </button>
+<!-- <button type="button" style="float: right;" class="btn btn-warning" @fade1>Cart<img src="assets/cart.png" style="width: 25px;height: 25px;"><span class="badge">{{count}}</span></button><br><br> -->
+<br><br>
+<div class="container-fluid row ">
+    <div class="col-md-4 mb-3 " *ngFor="let f of food">
+<div class="card" @fade>
+    <img src="{{f.src}}" style="width: 100%;height:300px ;"class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{f.name}}</h5>
+    <p class="card-text">{{f.price}} &#8377;</p>
+    <button class="btn btn-primary" (click)="add(f)">Add</button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container" [hidden]=!showFood>
+  <h1 class="text-info">Basket of Food</h1><br>
+
+  <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th>Food Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let f1 of food1">
+          <td>{{f1.name}}</td>
+          <td>{{f1.price}} &#8377;</td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+
+        <h2 class="s text-success">Total Amount - {{c}} &#8377;</h2>
+        <br>
+        <div class="text-center">   
+        <button class="btn btn-danger" >Checkout</button>
+        </div>
+        <br>
+  </div>
+
+  <div class="container" [hidden]=!showpayment >
+
+    <h2 class="text-info">Payment Option</h2><br>
+    <div class="list-group">
+      <a href="#" class="list-group-item">Debit card</a>
+      <a href="#" class="list-group-item">Credit card</a>
+      <a href="#" class="list-group-item">Net Banking</a>
+      <a href="www.paytm.com" class="list-group-item">Paytm</a>
+    </div>
+    <br>
+  </div>
+<!--   
+<ngx-spinner
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="square-jelly-box">
+></ngx-spinner> -->

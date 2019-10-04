@@ -1,0 +1,7 @@
+.cardflow{
+    display: flex;
+    flex-flow: row ;
+    float: left;
+    justify-content: space-between;
+    margin: 10px;
+}

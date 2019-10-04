@@ -1,0 +1,22 @@
+<div class="container">
+    <button class="btn btn-warning" style="float:right" >Grid</button><br>
+      <h1 class="foodlist">Food List</h1><br>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Food Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let f of foods">
+            <td>{{f.id}}</td>
+            <td>{{f.name}}</td>
+            <td>{{f.price}} &#8377;</td>
+           <button class="btn btn-info" (click)="add(f)">Add</button>
+          </tr>
+          </tbody>
+          </table>
+      <br><br>
+    </div>

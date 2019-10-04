@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+    <img src="assets/food.png" style="width: 50px;height: 50px;">
+    <a class="navbar-brand" routerLink="/" >Food</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/check">Menu</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto"> 
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/login"><img style="width:30px;height:30px;"src="assets/cart.png">Cart<span class="badge"></span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown"> <img style="width:20px;height:20px;"src="assets/signup.png">{{uname_get  | uppercase}}</a>
+                <div class="dropdown-menu">
+                  <button class="dropdown-item" (click)="prof()">Profile</button>
+                  <a class="dropdown-item" routerLink="/">Log out</a>
+              </div>
+              </li>
+
+            <!-- <li class="nav-item">
+                <a class="nav-link" ><img style="width:20px;height:20px;"src="assets/signup.png">{{uname_get  | uppercase}} </a>
+            </li>
+            -->
+          </ul>
+    </div>  
+  </nav><br>
+
+  <!-- <button  (click)="prof(descId)">Profile</button> -->

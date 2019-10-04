@@ -1,0 +1,89 @@
+
+<div class="container-fluid">
+  <div class="col-12">
+  <ngb-carousel >
+    <ng-template ngbSlide>
+      <img src="assets/coffee.jpg" alt="Random first slide">
+      <div class="carousel-caption">
+        <!-- <h3>10 seconds between slides...</h3> -->
+        <!-- <p>This carousel uses customized default values.</p> -->
+      </div>
+    </ng-template>
+     <ng-template ngbSlide>
+      <img src="assets/cake.jpg" alt="Random second slide">
+      <div class="carousel-caption">
+        <!-- <h3>No mouse events...</h3> -->
+        <!-- <p>This carousel doesn't pause or resume on mouse events</p> -->
+      </div>
+    </ng-template> 
+    <ng-template ngbSlide>
+      <img src="assets/ice.jpg"  alt="Random third slide">
+      <div class="carousel-caption">
+        <!-- <h3>No keyboard...</h3> -->
+        <!-- <p>This carousel uses customized default values.</p> -->
+      </div>
+    </ng-template>
+     <ng-template ngbSlide>
+      <img src="assets/veg.jpeg" alt="Random fourth slide">
+      <div class="carousel-caption">
+        <!-- <h3>And no wrap after last slide.</h3> -->
+        <!-- <p>This carousel uses customized default values.</p> -->
+      </div>
+    </ng-template> 
+    <ng-template ngbSlide>
+   <img src="assets/fruit.jpg" alt="Random fifth slide">
+   <div class="carousel-caption">
+     <!-- <h3>And no wrap after last slide.</h3> -->
+     <!-- <p>fruit</p> -->
+   </div>
+  </ng-template> 
+  </ngb-carousel>
+  
+  </div>
+  </div>
+  <br>
+  <div class="row">
+  <div class="col-sm-6 t">
+    <h1 style="color:crimson">About our story</h1>
+    <p>We are a leading Food company across india. We deliver variety of food of your choice. One cannot think well, love well and sleep well if one has not dined well. People who love to eat are always the best people.</p>
+  </div>
+  <div class="col-sm-6">
+  <img src="assets/pavbhaji.jpg" class="img1" [@fadeInOut]>
+  </div>
+  </div>
+  
+  <div style="text-align: center;color: indigo"  >
+    <h1 data-aos="flip-left" data-aos-duration="4000">Categories</h1>
+  </div><br><br><br><br>
+  
+  <div class="row"  >
+    <div class="col-sm-3" style="text-align: center" data-aos="fade-down-left"  data-aos-duration="3000">
+    <img src="assets/coffee1.png" style="width: 100px;height: 100px;"><br><br>
+    <h3>Hot beverages</h3>
+    </div>
+    <div class="col-sm-3" style="text-align: center" data-aos="fade-down-left"  data-aos-duration="2800">
+    <img src="assets/break.png" style="width: 100px;height: 100px;" ><br><br>
+    <h3>Breakfast</h3>
+    </div>
+    <div class="col-sm-3" style="text-align: center"data-aos="fade-down-left"  data-aos-duration="2500">
+    <img src="assets/juice.png" style="width: 100px;height: 100px;" ><br><br>
+    <h3>Cold drinks</h3>
+    </div>
+    <div class="col-sm-3" style="text-align: center" data-aos="fade-down-left"  data-aos-duration="2000">
+    <img src="assets/icecream.png" style="width: 100px;height: 100px;"><br><br>
+    <h3>Ice cream</h3>
+    </div>
+  </div>
+  <br><br>
+  
+  <h1 style="text-align:center">Destinations</h1><br><br>
+  <div class="container-fluid row ">
+    <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3 mb-3 " *ngFor="let c of city"  >
+  <div class="card" data-aos="fade-up" data-aos-duration="3000">
+    <img src="{{c.src}}" style="text-align:center;width: 100%;height:300px;"class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{c.name}}</h5>
+    </div>
+  </div>
+  </div>
+  </div>

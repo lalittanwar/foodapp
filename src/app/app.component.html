@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+    <img src="assets/food.png" style="width: 50px;height: 50px;">
+    <a class="navbar-brand" routerLink="/" >Food</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item" >
+          <a  class="nav-link" routerLink="/userslist">Users</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/food">Menu</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto"> 
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/login"><img style="width:30px;height:30px;"src="assets/cart.png">Cart<span class="badge"></span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" *ngIf="!auths.loggedin()" routerLink="/signup"><img style="width:25px;height:25px;"src="assets/user.png"><span>&nbsp;</span>Sign Up</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" *ngIf="!auths.loggedin()"  routerLink="/login"><img style="width:20px;height:20px;" src="assets/key.png"><span>&nbsp;</span>Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="auths.loggedin()"  ><img style="width:25px;height:25px;margin-right: 10px;color: honeydew"src="assets/user.png">{{name}}</a>
+           </li>    
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="auths.loggedin()" (click)="auths.logoutuser()" ><img style="width:25px;height:25px;" src="assets/power.png"><span>&nbsp;</span>LogOut</a>
+           </li>    
+          </ul>
+    </div>  
+  </nav>
+  <br>
+  <!-- <app-login [name]="lname"> </app-login> -->
+<router-outlet></router-outlet>

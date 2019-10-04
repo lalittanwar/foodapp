@@ -1,0 +1,11 @@
+.profile-img{
+    width: 150px;
+    height: 150px;
+}
+.example-card{
+    width:100px;
+
+    float:left;
+    margin: 5px;
+
+}

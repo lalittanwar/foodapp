@@ -1,0 +1,14 @@
+.s{
+    text-align: center;
+}
+.foodlist{
+color: #14189B;
+}
+.name{
+    float:right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    color: honeydew;
+    
+}

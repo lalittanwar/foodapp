@@ -1,0 +1,103 @@
+<div class="container">
+    <h1 class="foodlist">Food List</h1><br>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Food Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let f of foods">
+          <td>{{f.id}}</td>
+          <td>{{f.name}}</td>
+          <td>{{f.price}} &#8377;</td>
+          <button class="btn btn-info" (click)="add_to_basket(f)">Add to Basket</button>
+         <button *ngIf=isAdmin class="btn btn-danger" (click)="deleted(f._id)">Delete</button>
+        </tr>
+        </tbody>
+        </table>
+    <br><br>
+    <!-- <img [src]="url" height="200"> <br/>
+  <h4>File Upload</h4>
+  <input type='file' (change)="onSelectFile($event.target.files)"> 
+  <button (click)="onUpload()">Upload</button> -->
+  </div>
+
+  
+  
+  <div class="container" *ngIf="isAdmin">
+    <h1>Add</h1><br>
+    <form  (ngSubmit)="add(myForm)" #myForm="ngForm">
+      
+      <div class="form-group">
+           <label>Id</label>
+           <input type="number"  class="form-control" #id="ngModel"  [ngModel]='c1'
+           name="id"  ngModel ><br>
+        </div> 
+  
+         
+        <div class="form-group">
+         <label>Name</label>
+         <input type="text"  class="form-control" required  #name="ngModel" 
+         name="name"  ngModel  ><br>
+        </div>
+  
+         <div class="form-group">
+          <label>Price</label>
+          <input type="number"  class="form-control" #id="ngModel"  
+          name="price"  ngModel ><br>
+         </div> 
+         <button name="button" class="btn btn-primary" type="submit">Add</button>
+   </form>
+
+   
+  </div>
+
+  
+    <div class="container" [hidden]=!showFood>
+    <h1 class="text-info">Basket of Food</h1><br>
+
+    <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>Food Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let f1 of food1">
+            <td>{{f1.name}}</td>
+            <td>{{f1.price}} &#8377;</td>
+          </tr>
+          </tbody>
+          </table>
+          <br>
+
+          <h2 class="s text-success">Total Amount - {{c}} &#8377;</h2>
+          <br>
+          <div class="text-center">   
+          <button class="btn btn-danger" (click)="onCheckout()">Checkout</button>
+          </div>
+          <br>
+    </div>
+
+    <div class="container" [hidden]=!showpayment >
+
+      <h2 class="text-info">Payment Option</h2><br>
+      <div class="list-group">
+        <a href="#" class="list-group-item">Debit card</a>
+        <a href="#" class="list-group-item">Credit card</a>
+        <a href="#" class="list-group-item">Net Banking</a>
+        <a href="www.paytm.com" class="list-group-item">Paytm</a>
+      </div>
+      <br>
+    </div>
+    
+<ngx-spinner
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="ball-beat">
+></ngx-spinner>
