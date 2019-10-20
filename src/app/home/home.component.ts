@@ -20,6 +20,8 @@ import * as AOS from 'aos';
 })
 export class HomeComponent implements OnInit {
 city=[];
+food=[];
+food1=[];
  constructor(config: NgbCarouselConfig,private logins:LoginService) {
     // customize default values of carousels used by this component tree
     config.interval = 2000;
@@ -31,5 +33,7 @@ city=[];
   ngOnInit(){
     AOS.init();
     this.city=this.logins.getcity();
+    this.food=this.logins.getfood();
+    
   }
 }

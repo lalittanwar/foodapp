@@ -1,37 +1,50 @@
+<div class="intro-img container-fluid">
+  <div class="row">
+    <div class="col-sm-6 intro-info">
+        <h2>We have many <br><span style="color:darkblue">Branches</span><br>in India</h2><br>
+        <div>
+          <a href="#destinations" class="btn-get-started scrollto">Destinations</a>
+          <a href="#Categories" class="btn-services scrollto">Categories</a>
+        </div>
+      </div>
+    </div>
+</div>
+<br><br>
 
-<div class="container-fluid">
+
+<div class="container">
   <div class="col-12">
   <ngb-carousel >
     <ng-template ngbSlide>
-      <img src="assets/coffee.jpg" alt="Random first slide">
+      <img src="assets/coffee.jpg" class="img3" alt="Random first slide">
       <div class="carousel-caption">
         <!-- <h3>10 seconds between slides...</h3> -->
         <!-- <p>This carousel uses customized default values.</p> -->
       </div>
     </ng-template>
      <ng-template ngbSlide>
-      <img src="assets/cake.jpg" alt="Random second slide">
+      <img src="assets/cake.jpg"  class="img3" alt="Random second slide">
       <div class="carousel-caption">
         <!-- <h3>No mouse events...</h3> -->
         <!-- <p>This carousel doesn't pause or resume on mouse events</p> -->
       </div>
     </ng-template> 
     <ng-template ngbSlide>
-      <img src="assets/ice.jpg"  alt="Random third slide">
+      <img src="assets/ice.jpg" class="img3" alt="Random third slide">
       <div class="carousel-caption">
         <!-- <h3>No keyboard...</h3> -->
         <!-- <p>This carousel uses customized default values.</p> -->
       </div>
     </ng-template>
      <ng-template ngbSlide>
-      <img src="assets/veg.jpeg" alt="Random fourth slide">
+      <img src="assets/veg.jpeg" class="img3" alt="Random fourth slide">
       <div class="carousel-caption">
         <!-- <h3>And no wrap after last slide.</h3> -->
         <!-- <p>This carousel uses customized default values.</p> -->
       </div>
     </ng-template> 
     <ng-template ngbSlide>
-   <img src="assets/fruit.jpg" alt="Random fifth slide">
+   <img src="assets/fruit.jpg" class="img3" alt="Random fifth slide">
    <div class="carousel-caption">
      <!-- <h3>And no wrap after last slide.</h3> -->
      <!-- <p>fruit</p> -->
@@ -51,39 +64,138 @@
   <img src="assets/pavbhaji.jpg" class="img1" [@fadeInOut]>
   </div>
   </div>
-  
+
+
+  <div id="Categories">
+    <br>
   <div style="text-align: center;color: indigo"  >
     <h1 data-aos="flip-left" data-aos-duration="4000">Categories</h1>
   </div><br><br><br><br>
   
   <div class="row"  >
     <div class="col-sm-3" style="text-align: center" data-aos="fade-down-left"  data-aos-duration="3000">
-    <img src="assets/coffee1.png" style="width: 100px;height: 100px;"><br><br>
+    <img src="assets/coffee1.png" class="img2"><br><br>
     <h3>Hot beverages</h3>
     </div>
     <div class="col-sm-3" style="text-align: center" data-aos="fade-down-left"  data-aos-duration="2800">
-    <img src="assets/break.png" style="width: 100px;height: 100px;" ><br><br>
+    <img src="assets/break.png"  class="img2"><br><br>
     <h3>Breakfast</h3>
     </div>
     <div class="col-sm-3" style="text-align: center"data-aos="fade-down-left"  data-aos-duration="2500">
-    <img src="assets/juice.png" style="width: 100px;height: 100px;" ><br><br>
+    <img src="assets/juice.png" class="img2" ><br><br>
     <h3>Cold drinks</h3>
     </div>
     <div class="col-sm-3" style="text-align: center" data-aos="fade-down-left"  data-aos-duration="2000">
-    <img src="assets/icecream.png" style="width: 100px;height: 100px;"><br><br>
+    <img src="assets/icecream.png" class="img2"><br><br>
     <h3>Ice cream</h3>
     </div>
   </div>
-  <br><br>
+</div>
+
+  <br>
+
   
-  <h1 style="text-align:center">Destinations</h1><br><br>
-  <div class="container-fluid row ">
-    <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3 mb-3 " *ngFor="let c of city"  >
-  <div class="card" data-aos="fade-up" data-aos-duration="3000">
-    <img src="{{c.src}}" style="text-align:center;width: 100%;height:300px;"class="card-img-top" >
-  <div class="card-body">
-    <h5 class="card-title">{{c.name}}</h5>
+  
+<!-- <div class="container">
+    <div  class="column" *ngFor="let f of food">
+    <img class="img5" src="{{f.src}}">
+  </div>
+  </div> -->
+
+ <div class="row">
+   <div class="column">
+     <img src ="../../assets/food/29.jpg" style="width: 100%">
+     <img src ="../../assets/food/32.jpg" style="width: 100%">
+     <img src ="../../assets/food/13.jpg" style="width: 100%">
+     <img src ="../../assets/food/30.jpg" style="width: 100%">
+   </div>
+   <div class="column">
+      <img src ="../../assets/food/16.jpg" style="width: 100%">
+      <img src ="../../assets/food/15.jpg" style="width: 100%">
+      <img src ="../../assets/food/17.jpg" style="width: 100%">
+      <img src ="../../assets/food/18.jpg" style="width: 100%">
+    </div>
+    <div class="column">
+        <img src ="../../assets/food/19.jpg" style="width: 100%">
+        <img src ="../../assets/food/20.jpg" style="width: 100%">
+        <img src ="../../assets/food/21.jpg" style="width: 100%">
+        <img src ="../../assets/food/14.jpg" style="width: 100%">
+      </div>
+    <div class="column">
+        <img src ="../../assets/food/23.jpg" style="width: 100%">
+        <img src ="../../assets/food/24.jpg" style="width: 100%">
+        <img src ="../../assets/food/25.jpg" style="width: 100%">
+        <img src ="../../assets/food/26.jpg" style="width: 100%">
+      </div>
+ </div>
+
+ 
+ <div id="destinations">
+    <br>
+    <h1 style="text-align:center">Destinations</h1><br><br>
+    
+    <div class="container-fluid row ">
+      <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3 mb-3 " *ngFor="let c of city"  >
+    <div class="card" data-aos="fade-up" data-aos-duration="3000">
+      <img src="{{c.src}}" style="text-align:center;width: 100%;height:300px;"class="card-img-top" >
+    <div class="card-body">
+      <h5 class="card-title">{{c.name}}</h5>
+      </div>
+    </div>
+    </div>
     </div>
   </div>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6 ok">
+        <img src="../../assets/p6.jpg" class="p1">
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+          <img src="../../assets/p5.jpg" class="p1">
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <img src="../../assets/p3.jpg" class="p1">
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <img src="../../assets/p4.jpg" class="p1">
+            </div>   
+    </div>
+  </div>
+  <br><br>
+
+  <div class="container-fluid row footer" >
+    <div class="col-md-4 col-sm-6 col-lg-3 mt cen ">
+      <h4 style="font-family: Lucida Sans Unicode, Lucida Grande, sans-serif">Categories</h4><br>
+        <p>Breakfast</p>
+        <p>Hot bevrages</p>
+        <p>Cold drinks</p>
+        <p>Ice cream</p>
+    </div>
+    <div class="col-md-4 col-sm-6 col-lg-3 mt cen">
+        <h4 style="font-family: Lucida Sans Unicode, Lucida Grande, sans-serif">Address</h4><br>
+        <p>Embassy Tech Zone</p>
+        <p>Pune</p>
+        <p>+91 9829384111</p>
+        <p>lalit.tanwar258@gmail.com</p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-lg-3 mt cen">
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Email address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-success" type="button">Subscribe</button>
+          </div>
+        </div>
+        <div class="social-menu">
+          <ul>
+            <li><a href="#" ><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" ><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" ><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#" ><i class="fa fa-whatsapp"></i></a></li>
+          </ul>
+        <!-- <img src="../../assets/whatsapp.svg" style="width:20px; height:20px ">  -->
+      </div>
   </div>
   </div>
